@@ -9,5 +9,7 @@ spec:
     git: https://github.com/Azure/iotedge.git
     ref: release/1.1
     path: kubernetes/charts/edge-kubernetes
-  values:
-    serviceName: arc-k8s-demo
+  valuesFrom:
+  - secretKeyRef:
+      name: generic
+      namespace: iotedge

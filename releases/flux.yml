@@ -1,10 +1,24 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: azure-arc-sample
-  namespace: arc-k8s-demo
+  name: iot-edge-crd
+  namespace: iotedge
 spec:
-  releaseName: arc-k8s-demo
+  releaseName: iot-edge-crd
+  chart:
+    git: https://github.com/Azure/iotedge.git
+    ref: release/1.1
+    path: kubernetes/charts/edge-kubernetes-crd
+  values:
+    serviceName: arc-k8s-demo
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: iot-edge
+  namespace: iotedge
+spec:
+  releaseName: iot-edge
   chart:
     git: https://github.com/Azure/iotedge.git
     ref: release/1.1

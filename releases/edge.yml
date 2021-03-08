@@ -1,10 +1,10 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: iot-edge-crd
+  name: iot-edge
   namespace: iotedge
 spec:
-  releaseName: iot-edge-crd
+  releaseName: iot-edge
   chart:
     git: https://github.com/Azure/iotedge.git
     ref: release/1.1

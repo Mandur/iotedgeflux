@@ -11,5 +11,5 @@ spec:
     path: kubernetes/charts/edge-kubernetes
   valuesFrom:
   - secretKeyRef:
-      name: generic
+      name: connectionstring
       namespace: iotedge

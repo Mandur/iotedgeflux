@@ -8,6 +8,6 @@ spec:
   chart:
     git: https://github.com/Azure/iotedge.git
     ref: release/1.1
-    path: kubernetes/charts/
+    path: kubernetes/charts/edge-kubernetes-crd
   values:
     serviceName: arc-k8s-demo
